@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Detection Drone Map</title>
+    
+    <!-- External CSS (for modern styles) -->
+    <style>
+        /* Global Styles */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1b2735, #090a0f);
+            overflow-x: hidden;
+            color: #f8f8f8;
+        }
+        
+        /* Header styles */
+        h2 {
+            text-align: center;
+            font-size: 3rem;
+            color: #ff6666;
+            text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.6);
+            padding: 20px 0;
+        }
+
+        /* Map Container */
+        #map {
+            height: 500px;
+            width: 80%;
+            margin: 0 auto;
+            border: 3px solid #ff6666;
+            box-shadow: 0px 0px 30px rgba(255, 0, 0, 0.5);
+        }
+
+        /* Modern Button Style */
+        .button {
+            display: inline-block;
+            padding: 10px 30px;
+            margin: 20px auto;
+            background-color: #ff6666;
+            color: #fff;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #ff3333;
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.7);
+        }
+
+        /* Red particle trail effect */
+        .trail {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 0, 0, 0.8);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: flyaway 1s forwards;
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+        }
+        
+        @keyframes flyaway {
+            0% { transform: scale(1); }
+            100% { transform: scale(3); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h2>Human Detection Drone Map</h2>
+    <div id="map"></div>
+</body>
+<script src="drone.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwufPt9rZ3mS-fgMDTMB950DqipOJeFgs"></script>
+</html>
